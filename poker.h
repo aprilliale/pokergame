@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 #define SPADE   "\xE2\x99\xA0"
 #define CLUB    "\xE2\x99\xA3"
@@ -71,7 +72,7 @@ typedef struct deck{
 }Deck;
 
 typedef struct player{
-	const char *name;
+	char name[50];
 	Card *c1, *c2;
 	int account;
 }Player;
